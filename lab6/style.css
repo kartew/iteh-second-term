@@ -1,0 +1,340 @@
+{
+    box-sizing: border-box
+;
+    -webkit-box-sizing: border-box
+;
+    -moz-box-sizing: border-box
+;
+}
+body {
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+    background: rgba(71, 147, 227, 1);
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+h2 {
+    /*text-align: left;*/
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    /*padding: 30px 0;*/
+}
+
+label {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+/* Table Styles */
+
+.table-wrapper {
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+
+    .table-wrapper:before {
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+
+    .fl-table thead th:last-child {
+        border-bottom: none;
+    }
+
+    .fl-table thead {
+        float: left;
+    }
+
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+
+input[type=button],
+input[type=submit] {
+    background-color: #fefeff;
+    border: none;
+    color: #000000;
+    padding: 8px 30px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+[type="date"] {
+    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+
+label {
+    display: block;
+}
+
+input {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 190px;
+}
+
+.container {
+    /*margin: 80px auto;*/
+    /*width: 400px;*/
+    /*text-align: center;*/
+}
+
+.container > .dropdown {
+    /*margin: 0 20px;*/
+    /*vertical-align: top;*/
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 28px;
+    width: 150px;
+    background: #ffffff;
+    border: 1px solid;
+    border-color: white #f7f7f7 whitesmoke;
+    border-radius: 3px;
+    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown:before, .dropdown:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 9px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 4px dashed;
+    border-color: #000000 transparent;
+    pointer-events: none;
+}
+
+.dropdown:before {
+    border-bottom-style: solid;
+    border-top: none;
+}
+
+.dropdown:after {
+    margin-top: 7px;
+    border-top-style: solid;
+    border-bottom: none;
+}
+
+.dropdown-select {
+    position: relative;
+    width: 130%;
+    margin: 0;
+    padding: 6px 8px 6px 10px;
+    height: 28px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #000000;
+    text-shadow: 0 1px white;
+    background: #f2f2f2; /* Fallback for IE 8 */
+    background: rgba(0, 0, 0, 0) !important; /* "transparent" doesn't work with Opera */
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.dropdown-select:focus {
+    z-index: 3;
+    width: 100%;
+    color: #000000;
+    outline: 2px solid #49aff2;
+    /*outline: 2px solid -webkit-focus-ring-color;*/
+    outline-offset: -2px;
+}
+
+.dropdown-select > option {
+    margin: 3px;
+    padding: 6px 8px;
+    text-shadow: none;
+    background: #f2f2f2;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Fix for IE 8 putting the arrows behind the select element. */
+
+.lt-ie9 .dropdown {
+    z-index: 1;
+}
+
+.lt-ie9 .dropdown-select {
+    z-index: -1;
+}
+
+.lt-ie9 .dropdown-select:focus {
+    z-index: 3;
+}
+
+/* Dirty fix for Firefox adding padding where it shouldn't. */
+
+@-moz-document url-prefix() {
+    .dropdown-select {
+        padding-left: 6px;
+    }
+}
+
+.dropdown-dark {
+    background: #000000;
+    border-color: #111111 #0a0a0a black;
+    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-dark:before {
+    border-bottom-color: #aaa;
+}
+
+.dropdown-dark:after {
+    border-top-color: #aaa;
+}
+
+.dropdown-dark .dropdown-select {
+    color: #aaa;
+    text-shadow: 0 1px #000000;
+    background: #000000; /* Fallback for IE 8 */
+}
+
+.dropdown-dark .dropdown-select:focus {
+    color: #ccc;
+}
+
+.dropdown-dark .dropdown-select > option {
+    background: #000000;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+}
