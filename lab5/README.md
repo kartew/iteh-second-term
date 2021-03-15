@@ -10,11 +10,16 @@
 <img src="https://i.ibb.co/5YJrx5J/image.png" alt="schema"><br>
 
 <h3>Запрос #1</h3>
+
 ![img.png](images/img1-1.png)
 ![img.png](images/img1-2.png)
+
 <h3>Запрос #2</h3>
+
 ![img.png](images/img2-1.png)
 ![img.png](images/img2-2.png)
+
 <h3>Запрос #3</h3>
+
 ![img.png](images/img3-1.png)
 ![img.png](images/img3-2.png)
