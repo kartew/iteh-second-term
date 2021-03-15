@@ -13,6 +13,7 @@
 require_once('data_base.php');
 $dbh = db();
 $sql = "SELECT DISTINCT p.name FROM projects p inner join work w on p.ID_projects=w.FID_projects";
+
 ?>
 
 <h2>Запрос 1</h2>

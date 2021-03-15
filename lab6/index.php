@@ -21,7 +21,9 @@ $cursor = $collection->distinct('project');
 <form action="query_date.php" method="post">
     <label>Введите название проекта: </label>
     <div class="dropdown">
-        <select name="project_name" class="dropdown-select">
+        <select name="project_name" class="dropdown-select" id="saved_project_name"
+        oninput="localStorage.setItem('saved_project_name', saved_project_name.value)"
+        >
             <?php
             foreach ($cursor as $i) {
                 echo "<option>" . $i . "</option>";
@@ -73,6 +75,14 @@ $cursor = $collection->distinct('project');
     <br>
     <input type="submit" name="send" value="Узнать"/>
 </form>
+<script>
+    const saved_project_name = document.getElementById("saved_project_name");
+    saved_project_name.value = localStorage.getItem("saved_project_name");
 
+    for(let i=0; i<localStorage.length; i++) {
+        let key = localStorage.key(i);
+        console.log(`${key}: ${localStorage.getItem(key)}`);
+    }
+</script>
 </body>
 </html>
