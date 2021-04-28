@@ -34,6 +34,6 @@ $arg = array($my_name);
         echo $res[0]['time']
         ?>
         (день/дней)</h2>
-</div>
+</div>o
 </body>
 </html>
